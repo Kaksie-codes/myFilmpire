@@ -1,4 +1,3 @@
-import React from 'react'
 import Herosection from '../components/Herosection/Herosection'
 import Tabs from '../components/tabs/Tabs'
 import MoreText from '../components/moretext/MoreText'

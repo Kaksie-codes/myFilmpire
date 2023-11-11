@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 
-const FAQ = ({question, answer_top, answer_bottom}) => {
+const FAQ = ({question, answer_top, answer_bottom}:any) => {
     const [toggleFAQ, setToggleFAQ] = useState(false);
   return (
     <div className={`faq ${toggleFAQ && 'active'}`} onClick={() => {setToggleFAQ(!toggleFAQ)}}>
