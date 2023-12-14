@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -25,7 +25,7 @@ const SignUpPage = () => {
   const [background, setBackground] = useState('red');
   const [textColor, setTextColor] = useState('');
   const navigate = useNavigate();   
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const movies:string[] = [movie1, movie2, movie3, movie4, movie5, movie6, movie7];
   const [imageIndex, setImageIndex] = useState(0);
   let backgroundImage = `url(${movies[imageIndex]})`
@@ -76,6 +76,7 @@ const SignUpPage = () => {
         .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        console.log('User ', user);
         navigate("/movies");        
         // ...
         })
