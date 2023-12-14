@@ -55,7 +55,9 @@ const Herosection = () => {
                     <h1>Unlimited movies, TV shows, and more.</h1>
                     <h3>Watch anywhere. Cancel anytime.</h3>
                     <p>More than 25,000 users have experienced our streaming services.</p>                    
-                    <button className="btn btn-large">Get Started</button>
+                    <Link to='/signup'>
+                      <button className="btn btn-large">Get Started</button>
+                    </Link>
                 </div>
             </div>
             <div className="pagination">

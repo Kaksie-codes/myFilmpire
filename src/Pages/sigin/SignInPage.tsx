@@ -1,15 +1,25 @@
-import { useState } from 'react'
-import './signin.css'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Logo from '../../components/logo/Logo'
 import { useNavigate } from 'react-router-dom';
+import movie1 from '../../assets/movie1.jpg'
+import movie2 from '../../assets/movie2.jpg'
+import movie3 from '../../assets/movie3.webp'
+import movie4 from '../../assets/movie4.jpg'
+import movie5 from '../../assets/movie5.jpg'
+import movie6 from '../../assets/movie6.webp'
+import movie7 from '../../assets/movie7.jpg'
+import './signin.css'
 
 const SignInPage = () => {
   const [formData, setformData] = useState({ email:"", password:"" });
   const [type, setType] = useState('password');
   const navigate = useNavigate(); 
+  const movies:string[] = [movie1, movie2, movie3, movie4, movie5, movie6, movie7];
+  const [imageIndex, setImageIndex] = useState(0);
+  let backgroundImage = `url(${movies[imageIndex]})`
 
   const handleChange = (e:any) => {
     const {name, value} = e.target;
@@ -24,9 +34,19 @@ const SignInPage = () => {
           setType((prevType) => (prevType === 'password' ? 'text' : 'password'));
       }
   }
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % movies.length);
+    }, 4000);
+
+    // Clear the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, [imageIndex]);
+
   
   return (
-    <div className="signup-page">
+    <div className="signup-page" style={{backgroundImage:backgroundImage}}>
       <nav>
         <div className="nav__container container">
           <Logo/>                  

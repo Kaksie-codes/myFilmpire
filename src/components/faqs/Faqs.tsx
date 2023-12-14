@@ -1,4 +1,5 @@
 import FAQ from '../FAQ'
+import { Link } from 'react-router-dom'
 import './faqs.css'
 
 const Faqs = () => {
@@ -57,7 +58,9 @@ const Faqs = () => {
             />            
         </div>
         <p>More than 25,000 users have experienced our streaming services.</p>
-        <button className="btn btn-large">Get Started</button>
+        <Link to='/signup'>
+            <button className="btn btn-large">Get Started</button>
+        </Link>
     </div>
   )
 }
