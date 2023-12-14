@@ -1,5 +1,5 @@
   .hero-section{
-    height: 100vh;
+    height: 95vh;
     width: 100%;    
     position: relative;
     border-bottom: 3px solid #3d3d3d; 
@@ -106,5 +106,7 @@
   }
 
 @media screen and (min-width:40em){
-
+  .hero-section{
+    height: 100vh;
+  }
 }
