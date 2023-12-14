@@ -45,7 +45,7 @@ const Herosection = () => {
             <div className={`nav ${show ? 'nav__black' : ''}`}>
                 <div className="nav__container container">
                     <Logo/>
-                    <Link to="/sigin">
+                    <Link to="/signin">
                       <div className="btn">Sign In</div>
                     </Link>
                 </div>
