@@ -7,13 +7,6 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebase';
 import Logo from '../../components/logo/Logo';
-import movie1 from '../../assets/movie1.jpg'
-import movie2 from '../../assets/movie2.jpg'
-import movie3 from '../../assets/movie3.webp'
-import movie4 from '../../assets/movie4.jpg'
-import movie5 from '../../assets/movie5.jpg'
-import movie6 from '../../assets/movie6.webp'
-import movie7 from '../../assets/movie7.jpg'
 import './signup.css'
 
 const SignUpPage = () => {
@@ -26,23 +19,13 @@ const SignUpPage = () => {
   const [textColor, setTextColor] = useState('');
   const navigate = useNavigate();   
   // const dispatch = useDispatch();
-  const movies:string[] = [movie1, movie2, movie3, movie4, movie5, movie6, movie7];
-  const [imageIndex, setImageIndex] = useState(0);
-  let backgroundImage = `url(${movies[imageIndex]})`
+  
 
   useEffect(() => {
     calculatePasswordStrength(formData.password)
   }, [formData.password])
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex + 1) % movies.length);
-    }, 4000);
-
-    // Clear the interval when the component is unmounted
-    return () => clearInterval(intervalId);
-  }, [imageIndex]);
-
+  
   //Function for updating state of the form
   const handleChange = (e:any) => {
     const {name, value} = e.target;
@@ -142,7 +125,7 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="signup" style={{backgroundImage:backgroundImage}}>
+    <div className="signup">
     <nav>
       <div className="nav__container container">        
         <Logo/>                 
@@ -171,7 +154,7 @@ const SignUpPage = () => {
           <input 
             type={type}
             autoComplete="password" 
-            maxLength={30}
+            maxLength={23}
             minLength={5} 
             name="password" 
             onChange={handleChange} value={formData.password}
@@ -194,7 +177,7 @@ const SignUpPage = () => {
           <input 
             type={confirmType}
             autoComplete="password"
-            maxLength={30} minLength={5} name="passwordCheck" 
+            maxLength={23} minLength={5} name="passwordCheck" 
             onChange={handleChange}
             value={formData.passwordCheck}
             className={formData.passwordCheck.length > 0 ? "has-value" : ""}

@@ -1,7 +1,8 @@
 .signup-page{
     height: 100vh;
     width: 100%;    
-    position: relative;    
+    position: relative;
+    background: url("../../assets/movie1.jpg");    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
