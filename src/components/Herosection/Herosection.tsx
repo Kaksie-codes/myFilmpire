@@ -8,6 +8,7 @@ import movie5 from '../../assets/movie5.jpg'
 import movie6 from '../../assets/movie6.webp'
 import movie7 from '../../assets/movie7.jpg'
 import './herosection.css'
+import { Link } from 'react-router-dom';
 
 
 const Herosection = () => {
@@ -44,7 +45,9 @@ const Herosection = () => {
             <div className={`nav ${show ? 'nav__black' : ''}`}>
                 <div className="nav__container container">
                     <Logo/>
-                    <div className="btn">Sign In</div>
+                    <Link to="/sigin">
+                      <div className="btn">Sign In</div>
+                    </Link>
                 </div>
             </div>
             <div className="content">

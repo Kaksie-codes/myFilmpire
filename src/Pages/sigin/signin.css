@@ -1,0 +1,127 @@
+.signup-page{
+    height: 100vh;
+    width: 100%;    
+    position: relative;
+    background: url("../../assets/movie1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-page::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 100px 100px 250px #000000, inset -100px -100px 250px #000000;
+}
+nav{
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    z-index: 100;
+}
+.signup-modal{
+    position: relative;    
+    width: min(500px, 90%);
+    padding: 50px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.signup-modal h3{
+    margin-bottom: 0.7rem;
+}
+.signup-modal form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.signup-modal b{
+    color: #fff;    
+}
+.signup-modal b:hover{
+    text-decoration: underline;
+}
+.signup-modal p{ 
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+form .password_input{
+    height: 3.6rem;
+    position: relative;
+    width: 100%;
+}
+form .password_input input{
+    width: 100%; 
+    font-size: 1.3rem !important;       
+    padding: 10px;
+    outline: none;
+    height: 100%;
+    border: transparent;
+}
+form .password_input span{
+    position: absolute;
+    left: 10px;
+    top: 1.8rem;
+    font-size: var(--fs-sm);
+    transform: translateY(-50%);
+}
+form input.has-value{
+    border-bottom: 2px solid var(--netflix-golden-color);
+}
+form .password_input span.has-value{
+    top: 10px;
+   font-size: 14px;
+}
+.password_input .icon{
+    position: absolute;
+    right: 10px;
+    top: 1.8rem;    
+    transform: translateY(-50%);
+    color: #000;
+    cursor: pointer;
+}
+.password-input input{
+    font-size: 1.2rem !important;
+    color: #000000 !important;
+}
+/* .password_input.special{
+    margin-top: -8px;
+    padding-top: 0;
+} */
+form .has-value{
+    top: 3px;
+    font-size: 0.8rem;
+}
+
+
+form .button{
+    width: 100%;
+    background: var(--netflix-primary-color);
+    color: #fff;
+    padding: 1rem 1.3rem;
+    font-size: var(--fs-sm);
+    outline: none;
+    border: none;
+}
+form button:hover{
+    opacity: 0.9;
+}
+/* form input.has-value + span{
+    top: 3px;
+    font-size: 0.8rem;
+} */
+
+@media screen  and (min-width:40em){
+    .signup-modal{
+        padding: 50px;
+    }
+}
