@@ -75,7 +75,7 @@ form .password_input span{
     transform: translateY(-50%);
 }
 form input.has-value{
-    border-bottom: 2px solid var(--netflix-golden-color);
+    border-bottom: 4px solid var(--netflix-golden-color);
 }
 form .password_input span.has-value{
     top: 10px;
@@ -93,16 +93,10 @@ form .password_input span.has-value{
     font-size: 1.2rem !important;
     color: #000000 !important;
 }
-/* .password_input.special{
-    margin-top: -8px;
-    padding-top: 0;
-} */
 form .has-value{
     top: 3px;
     font-size: 0.8rem;
 }
-
-
 form .button{
     width: 100%;
     background: var(--netflix-primary-color);
@@ -111,14 +105,11 @@ form .button{
     font-size: var(--fs-sm);
     outline: none;
     border: none;
+    cursor: pointer;
 }
 form button:hover{
     opacity: 0.9;
 }
-/* form input.has-value + span{
-    top: 3px;
-    font-size: 0.8rem;
-} */
 
 @media screen  and (min-width:40em){
     .signup-modal{

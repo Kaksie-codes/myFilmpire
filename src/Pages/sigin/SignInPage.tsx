@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Logo from '../../components/logo/Logo'
+import { useNavigate } from 'react-router-dom';
 
 const SignInPage = () => {
   const [formData, setformData] = useState({ email:"", password:"" });
   const [type, setType] = useState('password');
+  const navigate = useNavigate(); 
 
   const handleChange = (e:any) => {
     const {name, value} = e.target;
@@ -27,10 +29,10 @@ const SignInPage = () => {
     <div className="signup-page">
       <nav>
         <div className="nav__container container">
-          <Link to="/">
-            <Logo/> 
-          </Link>          
-          <button className="btn btn-rounded">Sign Up</button>            
+          <Logo/>                  
+          <Link to="/signup">
+            <button className="btn btn-rounded">Sign Up</button>
+          </Link>            
         </div> 
       </nav>
       <div className="signup-modal">
@@ -76,9 +78,7 @@ const SignInPage = () => {
           // onClick={signInUser}
           >Sign In</button>
         </form>
-        <p>New to Netflix? <b 
-        // onClick={() => navigate("/signup")}
-        >Sign Up Now</b></p>
+        <p>New to Netflix? <b onClick={() => navigate("/signup")}>Sign Up Now</b></p>
       </div>
     </div>
   )
