@@ -1,0 +1,81 @@
+.banner__skeleton{
+    /* height: 90vh;     */
+    animation: skeleton 1s ease infinite alternate;
+    /* overflow: hidden; */
+    background-color: blue;
+    width: 90vw;
+    overflow-x: none !important;
+}
+@keyframes skeleton {
+    to{
+        opacity: 0.5;
+    }
+}
+.banner__skeleton-content{    
+    padding-top: 140px;
+    animation: skeleton 1s ease infinite alternate;
+}
+/* 
+.banner__skeleton-title{
+    height: 1.5rem;
+    padding-bottom: 0.3rem;    
+    background-color: rgb(199, 199, 199);
+    width: 50%;
+    border-radius: 0.25rem;
+}
+.banner__skeleton-buttons{
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+.banner__skeleton-button{
+    height: 60px;
+    width: 130px;    
+    background-color: rgb(199, 199, 199);
+}
+.banner__skeleton-texts{
+    width: 50%;
+}
+.banner__skeleton-text{
+    border-radius: 0.25rem;    
+    background-color: rgb(199, 199, 199);
+    height: 1rem;
+    margin-bottom: 1rem;
+}
+.banner__skeleton-text:nth-of-type(3){
+    width: 70%;
+} */
+
+.row__skeleton{
+    /* width: 97%;     */
+    /* margin-inline: 3%;     */
+    animation: skeleton 1s ease infinite alternate;
+    margin-bottom: 1rem;   
+    /* overflow: hidden;  */
+}
+.row__skeleton:nth-of-type(1){    
+    margin-top: 2.4rem;
+}
+.row__skeleton .row__skeleton-title{
+    height: 1.5rem;
+    margin-bottom: 0.7rem;    
+    background-color: rgb(199, 199, 199);
+    width: 25%;
+    border-radius: 0.25rem;
+    animation: skeleton 1s ease infinite alternate;
+}
+.row__skeleton .row__wrapper-skeleton{
+    width: 100%;
+    display: flex;
+    gap: 10px;    
+}
+.row__skeleton .row__wrapper-movie{
+    min-width: 300px;
+    background-color: rgb(199, 199, 199);
+    height: 150px;
+    /* margin-top: 1rem; */
+    border-radius: 0.25rem;
+    animation: skeleton 1s ease infinite alternate;
+}
+

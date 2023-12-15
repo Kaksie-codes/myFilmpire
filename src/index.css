@@ -73,26 +73,26 @@
     font-size: 16px;    
   }
   .container{
-    width: 90%;    
+    width: min(90%, 1200px);    
     margin-inline: auto;    
   }
-  .container__small{
+  /* .container__small{
     width: 90%;    
     margin-inline: auto;  
   }
   .container__tiny{
     width: 90%;    
     margin-inline: auto;  
-  }
+  } */
     
-  @media screen  and (min-width: 40em){
+  /* @media screen  and (min-width: 40em){
     .container__small{
         width: 70%;
     }
     .container__tiny{
         width: 60%;
     }
-  }
+  } */
   .text-center{
     text-align: center;
   }  

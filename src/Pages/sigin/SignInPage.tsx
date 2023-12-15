@@ -2,8 +2,10 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { signInWithEmailAndPassword } from "firebase/auth";
 import Logo from '../../components/logo/Logo'
 import { useNavigate } from 'react-router-dom';
+import { auth } from '../../../firebase';
 import './signin.css'
 
 const SignInPage = () => {
@@ -25,7 +27,26 @@ const SignInPage = () => {
       }
   }
 
-  
+  //Function for signing up user with google firebase authentication
+  const signInUser = (e: any) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, formData.email, formData.password)
+    .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log('User ', user);
+    navigate("/movies");  
+    // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+      console.log('error code ',errorCode);
+      navigate("/"); 
+    });
+  }
+
   return (
     <div className="signup-page">
       <nav>
@@ -76,7 +97,7 @@ const SignInPage = () => {
         </div>
         <button type="submit" 
           className="button" 
-          // onClick={signInUser}
+          onClick={signInUser}
           >Sign In</button>
         </form>
         <p>New to Netflix? <b onClick={() => navigate("/signup")}>Sign Up Now</b></p>
