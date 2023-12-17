@@ -55,7 +55,7 @@
     /* margin-inline: 3%;     */
     animation: skeleton 1s ease infinite alternate;
     margin-bottom: 1rem;   
-    /* overflow: hidden;  */
+    overflow: hidden; 
 }
 .row__skeleton:nth-of-type(1){    
     margin-top: 2.4rem;

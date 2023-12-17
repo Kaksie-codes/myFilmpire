@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux'
 import requests from '../../requests'
 import { Movie } from '../../components/Banner'
 import Skeleton from '../../components/skeletons/Skeleton'
-import Row from '../../components/rows/Row'
 import './moviespage.css'
 import Footer from '../../components/footer/Footer'
 import Carousel from '../../components/carousel/Carousel'
@@ -64,42 +63,42 @@ const MoviesPage: React.FC = () => {
           title="NETFLIX ORIGINALS"
           fetchURL={requests.fetchNetflixOriginals}
           isLargeRow={false}
+        />        
+        <Carousel
+          title="Trending Now"
+          fetchURL={requests.fetchTrending}
+          isLargeRow={false}
         />
-        {/* <Row
-            title="Trending Now"
-            fetctURL={requests.fetchTrending}
-            isLargeRow={false}
+        <Carousel
+          title="Top Rated"
+          fetchURL={requests.fetchTopRated}
+          isLargeRow={false}
         />
-        <Row
-            title="Top Rated"
-            fetctURL={requests.fetchTopRated}
-            isLargeRow={false}
+        <Carousel
+          title="Action Movies"
+          fetchURL={requests.fetchActionMovies}
+          isLargeRow={false}
         />
-        <Row
-            title="Action Movies"
-            fetctURL={requests.fetchActionMovies}
-            isLargeRow={false}
+        <Carousel
+          title="Comedy Movies"
+          fetchURL={requests.fetchComedyMovies}
+          isLargeRow={false}
         />
-        <Row
-            title="Comedy Movies"
-            fetctURL={requests.fetchComedyMovies}
-            isLargeRow={false}
+        <Carousel
+          title="Horror Movies"
+          fetchURL={requests.fetchHorrorMovies}
+          isLargeRow={false}
         />
-        <Row
-            title="Horror Movies"
-            fetctURL={requests.fetchHorrorMovies}
-            isLargeRow={false}
+        <Carousel
+          title="Romance Movies"
+          fetchURL={requests.fetchRomanceMovies}
+          isLargeRow={false}
         />
-        <Row
-            title="Romance Movies"
-            fetctURL={requests.fetchRomanceMovies}
-            isLargeRow={false}
-        />
-        <Row
-            title="Documentaries"
-            fetctURL={requests.fetchDocumentaries}
-            isLargeRow={false}
-        /> */}
+        <Carousel
+          title="Documentaries"
+          fetchURL={requests.fetchDocumentaries}
+          isLargeRow={false}
+        />       
         <Footer/>
       </div>      
     </div>

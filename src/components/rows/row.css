@@ -1,4 +1,4 @@
-.row{
+/* .row{
     width: 100%;
     margin-top: 10px;
 }
@@ -9,13 +9,13 @@
     position: relative;
 }
 .wrapper .movie__slider{
-    /* --slider-index: 0; */
+  
     display: flex;    
     margin-left: 3%;
     width: max-content;
     gap: 5px;
     transform: translateX(0);
-    /* transform: translateX(calc(var(--slider-index) * 100%)); */
+    
     transition: all 1s ease;
     overflow: visible;
 }
@@ -52,9 +52,7 @@
     display: none;
 }
 .movie-card{
-    /* width: 230px; */
     width: 100%;
-    /* width: auto; */
     height: 100%;
     cursor: pointer;
     position: relative;
@@ -79,73 +77,4 @@
     background: #181818;
     transition: 0.3s ease-in-out;
     background: red;
-}
-.movie-card .hover img{
-    height: 140px;
-    width: 100%;
-}
-.movie-card .info-container{
-    position: relative;
-    z-index: 100;
-}
-.hover .image-video-container{
-    position: relative;
-    height: 140px;
-}
-.image-video-container img{
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 0.3rem;
-    top: 0;
-    z-index: 4;
-    position: absolute;
-}
-.image-video-container video{
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 0.3rem;
-    top: 0;
-    z-index: 5;
-    position: absolute;
-}
-.info-container{
-    padding: 1rem;
-    gap: 0.5rem;
-}
-.icons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-.icons .controls{
-    display: flex;
-    gap: 1rem;
-}
-.icons svg{
-    font-size: 2rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-.icons svg:hover{
-    color: #b8b8b8;
-}
-.genres ul{
-    display: flex;
-    gap: 1rem;    
-}
-.genres ul li{
-    padding-right: 0.7rem;
-    list-style: unset;    
-}
-.genres ul li:first-of-type{
-    list-style: none;
-}
-@media screen and (min-width: 80em) {
-    .movie{
-        width: 250px;
-    }
-   
-}
+} */
