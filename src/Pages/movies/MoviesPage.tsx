@@ -9,6 +9,7 @@ import Skeleton from '../../components/skeletons/Skeleton'
 import Row from '../../components/rows/Row'
 import './moviespage.css'
 import Footer from '../../components/footer/Footer'
+import Carousel from '../../components/carousel/Carousel'
 
 interface StoreProps {
   searchedMovies: string | null;
@@ -32,7 +33,7 @@ const MoviesPage: React.FC = () => {
       const newBannerMovie = request.data.results;
       const randomNumber = Math.floor(Math.random() * newBannerMovie.length - 1);
       setBannerMovie(newBannerMovie[randomNumber]);
-      // setLoading(false);     
+      setLoading(false);      
       
       return request;
     }
@@ -54,12 +55,17 @@ const MoviesPage: React.FC = () => {
         <Banner movie={bannerMovie}/>
       )}
       <div className="movies__collection">
-        <Row
+        {/* <Row
             title="NETFLIX ORIGINALS"
             fetctURL={requests.fetchNetflixOriginals}
             isLargeRow={false}
+        /> */}
+        <Carousel
+          title="NETFLIX ORIGINALS"
+          fetchURL={requests.fetchNetflixOriginals}
+          isLargeRow={false}
         />
-        <Row
+        {/* <Row
             title="Trending Now"
             fetctURL={requests.fetchTrending}
             isLargeRow={false}
@@ -93,9 +99,9 @@ const MoviesPage: React.FC = () => {
             title="Documentaries"
             fetctURL={requests.fetchDocumentaries}
             isLargeRow={false}
-        />
-      </div>
-      {/* <Footer/> */}
+        /> */}
+        <Footer/>
+      </div>      
     </div>
   );  
 }

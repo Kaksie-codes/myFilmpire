@@ -1,11 +1,14 @@
-.banner__skeleton{
-    /* height: 90vh;     */
-    animation: skeleton 1s ease infinite alternate;
-    /* overflow: hidden; */
-    background-color: blue;
-    width: 90vw;
-    overflow-x: none !important;
+.banner-skele{    
+    animation: skeleton 1s ease infinite alternate;  
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    color: #fff;  
 }
+
 @keyframes skeleton {
     to{
         opacity: 0.5;
@@ -15,7 +18,6 @@
     padding-top: 140px;
     animation: skeleton 1s ease infinite alternate;
 }
-/* 
 .banner__skeleton-title{
     height: 1.5rem;
     padding-bottom: 0.3rem;    
@@ -45,7 +47,8 @@
 }
 .banner__skeleton-text:nth-of-type(3){
     width: 70%;
-} */
+}
+
 
 .row__skeleton{
     /* width: 97%;     */

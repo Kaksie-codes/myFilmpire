@@ -76,15 +76,15 @@
     width: min(90%, 1200px);    
     margin-inline: auto;    
   }
-  /* .container__small{
+  /* .container__tiny{
     width: 90%;    
     margin-inline: auto;  
   }
-  .container__tiny{
-    width: 90%;    
-    margin-inline: auto;  
-  } */
-    
+  .container__small{
+    width: 90%;
+    margin-inline: auto;
+} */
+  
   /* @media screen  and (min-width: 40em){
     .container__small{
         width: 70%;

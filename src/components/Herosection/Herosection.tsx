@@ -37,7 +37,7 @@ const Herosection = () => {
     // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
   }, [imageIndex]);
-//   style={{backgroundImage: `url(${movies[imageIndex]})`}}
+
   return (
     <section className='hero-section' >
         <img src={movies[imageIndex]} alt="" />

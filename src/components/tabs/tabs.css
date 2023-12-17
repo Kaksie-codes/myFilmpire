@@ -3,6 +3,9 @@
     padding-top: 1rem;
   border-bottom: 3px solid #3d3d3d;
 }
+.tabs .container{
+  padding-inline: 0;
+}
 .tabs__container{
     display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -131,9 +134,11 @@
   }
 
 @media screen and (min-width: 40em) {
-.tabs__container{
-    width: 70%;
-}
+  .tabs .container{
+    width: 80%;
+    max-width: 1000px;
+  }
+
 .tabs .top p{
     padding-top: 1.5rem;
     display: block;

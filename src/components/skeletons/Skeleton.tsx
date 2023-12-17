@@ -5,7 +5,7 @@ const Skeleton = ({type}:{type:string}) => {
     
     const BannerSkeleton = () => {
         return (
-            <div className="banner__skeleton ">
+            <div className="banner-skele">
                 <div className="container">
                     <div className="banner__skeleton-content">
                         <div className="banner__skeleton-title"></div>

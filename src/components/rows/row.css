@@ -52,37 +52,23 @@
     display: none;
 }
 .movie-card{
-    width: 230px;
-    height: 100%; 
-    /* height: 120px; */
+    /* width: 230px; */
+    width: 100%;
+    /* width: auto; */
+    height: 100%;
     cursor: pointer;
-    /* z-index: -1; */
-    /* max-width: 230px; */
-    
-    /* height: 100%;     */
     position: relative;
 }
 .movie-card img {    
     width: 100%;    
-    height: 100%;
-    /* object-fit: cover; */
+    height: 100%;    
     border-radius: 0.2rem;
     z-index: 10;
 }
-/* .movie-card:hover{
-    height: 300px;
-    width: 325px;
-    background: red;
-    position: absolute;
-}
-.movie-card:hover img{
-    height: 150px;
-    object-fit: cover;
-} */
 
 
-.movie-card .hover{
-    /* position: absolute;  */
+
+.movie-card .hover{    
     position: fixed;      
     z-index: 9000 !important;
     height: 300px;
@@ -102,52 +88,6 @@
     position: relative;
     z-index: 100;
 }
-
-/* .movie{
-    max-width: 230px;
-    width: 230px;
-    height: 100%;
-    cursor: pointer;
-    position: relative;
-}  */
-/* .movie img {    
-    width: 100%;
-    height: 120px;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.2rem;
-    z-index: 10;
-}
-.movie p {
-    text-transform: capitalize;
-    height: 20px;
-    padding-bottom: 0.5rem;    
-} */
-/* .movie:hover{
-    transform: scale(1.02);
-    overflow: visible;
-} */
-/* .row__posterLarge{
-   height: 300px;
-   width: auto;
-
-} */
-/* .row__posterLarge:hover{
-    transform: scale(1.09);
-    opacity: 1;
-} */
-/* .movie .hover{
-    position: absolute;       
-    z-index: 9000000000000000000000000 !important;
-    height: max-content;    
-    top: -18vh;    
-    left: 0;
-    width: 20rem;    
-    border-radius: 0.3rem;
-    box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
-    background: #181818;
-    transition: 0.3s ease-in-out;
-} */
 .hover .image-video-container{
     position: relative;
     height: 140px;
