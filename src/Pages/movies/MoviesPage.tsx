@@ -9,6 +9,7 @@ import Skeleton from '../../components/skeletons/Skeleton'
 import './moviespage.css'
 import Footer from '../../components/footer/Footer'
 import Carousel from '../../components/carousel/Carousel'
+import SearchedMoviesContainer from '../../components/searchedmovies/SearchedMoviesContainer'
 
 interface StoreProps {
   searchedMovies: string | null;
@@ -45,7 +46,10 @@ const MoviesPage: React.FC = () => {
 
   return (
     <div className="moviespage">
-      <Navbar />
+      {
+        !searchedMovies ? (
+          <>
+            <Navbar />
       {loading ? (
         // Render loading spinner or message
         <Skeleton type="banner"/>        
@@ -101,6 +105,15 @@ const MoviesPage: React.FC = () => {
         />       
         <Footer/>
       </div>      
+          </>
+        ) : (
+          <>
+            <SearchedMoviesContainer/>
+            <Footer/>
+          </>
+        )
+      }
+      
     </div>
   );  
 }

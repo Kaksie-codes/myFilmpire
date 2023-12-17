@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import LandingPage from './Pages/landing/LandingPage'
-import Footer from './components/footer/Footer'
+// import Footer from './components/footer/Footer'
 import SignInPage from './Pages/sigin/SignInPage'
 import SignUpPage from './Pages/signup/SignUpPage'
 import MoviesPage from './Pages/movies/MoviesPage'
