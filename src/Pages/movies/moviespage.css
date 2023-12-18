@@ -108,24 +108,22 @@
     height: 100%;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
+}
+.movie-card .image{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 0.2rem;
 }
 .movie-card img {    
     width: 100%;    
-    height: 100%;    
-    border-radius: 0.2rem;
+    height: 100%;  
     z-index: 10;
+    transition: all 300ms ease;
 }
-.movie-card .hover{    
-    position: fixed;      
-    z-index: 9000 !important;
-    height: 300px;
-    width: 325px;
-    top: 0;    
-    border-radius: 0.3rem;
-    box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
-    background: #181818;
-    transition: 0.3s ease-in-out;
-    /* background: red; */
+.movie-card:hover img{
+    transform: scale(1.2);
 }
 .movie-card p{
     width: 100%;
@@ -189,13 +187,7 @@
     /* height: fit-content; */
     /* width: 100%; */
 }
-.swiper-custom-pagination .number{
-    /* height: 25px; */
-    /* padding: 5px !important; */
-    /* background-color: red; */
-    /* z-index: 223445554333; */
-    /* color: #fff; */
-}
+
 .swiper-custom-pagination .swiper-pagination-bullet{
     width: 25px;
     height: 5px;

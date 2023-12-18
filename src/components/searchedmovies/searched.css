@@ -1,0 +1,11 @@
+.searched-movies{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 6rem;
+}
+.searched-movies .container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 30px;
+    column-gap: 10px;
+}

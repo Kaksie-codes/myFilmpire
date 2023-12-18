@@ -31,7 +31,7 @@ const Navbar = () => {
         // return response.data.results;
         const movies = response.data.results;
         dispatch(setSearchedMovies(movies))
-        // console.log("Submitted:", response.data.results);
+        // console.log("Submitted movies:", response.data.results);
         setSearchValue("");
       }
     

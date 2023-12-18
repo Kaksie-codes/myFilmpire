@@ -26,6 +26,7 @@ const MoviesPage: React.FC = () => {
 
   const [loading, setLoading] = useState(true);
   const {searchedMovies} = useSelector((state: RootState) => state.user)
+  console.log('searched movies', searchedMovies)
   
   useEffect(() => {
     const fetchData = async() => {
@@ -40,81 +41,79 @@ const MoviesPage: React.FC = () => {
 
     fetchData()
   },[])
-  if(bannerMovie){
-    console.log('bannerMovie ',bannerMovie);
-  }
+  // if(bannerMovie){
+  //   console.log('bannerMovie ',bannerMovie);
+  // }
 
   return (
-    <div className="moviespage">
-      {
-        !searchedMovies ? (
-          <>
-            <Navbar />
-      {loading ? (
-        // Render loading spinner or message
-        <Skeleton type="banner"/>        
-      ) : (
-        // Render content when data is loaded
-        <Banner movie={bannerMovie}/>
-      )}
-      <div className="movies__collection">
-        {/* <Row
-            title="NETFLIX ORIGINALS"
-            fetctURL={requests.fetchNetflixOriginals}
-            isLargeRow={false}
-        /> */}
-        <Carousel
-          title="NETFLIX ORIGINALS"
-          fetchURL={requests.fetchNetflixOriginals}
-          isLargeRow={false}
-        />        
-        <Carousel
-          title="Trending Now"
-          fetchURL={requests.fetchTrending}
-          isLargeRow={false}
-        />
-        <Carousel
-          title="Top Rated"
-          fetchURL={requests.fetchTopRated}
-          isLargeRow={false}
-        />
-        <Carousel
-          title="Action Movies"
-          fetchURL={requests.fetchActionMovies}
-          isLargeRow={false}
-        />
-        <Carousel
-          title="Comedy Movies"
-          fetchURL={requests.fetchComedyMovies}
-          isLargeRow={false}
-        />
-        <Carousel
-          title="Horror Movies"
-          fetchURL={requests.fetchHorrorMovies}
-          isLargeRow={false}
-        />
-        <Carousel
-          title="Romance Movies"
-          fetchURL={requests.fetchRomanceMovies}
-          isLargeRow={false}
-        />
-        <Carousel
-          title="Documentaries"
-          fetchURL={requests.fetchDocumentaries}
-          isLargeRow={false}
-        />       
-        <Footer/>
-      </div>      
-          </>
+    <>
+      <div >
+        {
+          !searchedMovies ? (
+            <div className="moviespage">
+              <Navbar />
+        {loading ? (
+          // Render loading spinner or message
+          <Skeleton type="banner"/>
         ) : (
-          <>
-            <SearchedMoviesContainer/>
-            <Footer/>
-          </>
-        )
-      }
+          // Render content when data is loaded
+          <Banner movie={bannerMovie}/>
+        )}
+        <div className="movies__collection">
+          <Carousel
+            title="NETFLIX ORIGINALS"
+            fetchURL={requests.fetchNetflixOriginals}
+            isLargeRow={false}
+          />
+          <Carousel
+            title="Trending Now"
+            fetchURL={requests.fetchTrending}
+            isLargeRow={false}
+          />
+          <Carousel
+            title="Top Rated"
+            fetchURL={requests.fetchTopRated}
+            isLargeRow={false}
+          />
+          <Carousel
+            title="Action Movies"
+            fetchURL={requests.fetchActionMovies}
+            isLargeRow={false}
+          />
+          <Carousel
+            title="Comedy Movies"
+            fetchURL={requests.fetchComedyMovies}
+            isLargeRow={false}
+          />
+          <Carousel
+            title="Horror Movies"
+            fetchURL={requests.fetchHorrorMovies}
+            isLargeRow={false}
+          />
+          <Carousel
+            title="Romance Movies"
+            fetchURL={requests.fetchRomanceMovies}
+            isLargeRow={false}
+          />
+          <Carousel
+            title="Documentaries"
+            fetchURL={requests.fetchDocumentaries}
+            isLargeRow={false}
+          />
+          <Footer/>
+        </div>
+            </div>
+          ) : (
+            <>
+              <Navbar/>
+              <SearchedMoviesContainer movies={searchedMovies}/>
+              <Footer/>
+            </>
+          )
+        }
       
-    </div>
+      </div>
+    </>
   );  
 }
 

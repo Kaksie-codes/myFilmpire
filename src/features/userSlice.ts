@@ -1,10 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { SearchedMovie } from "../components/searchedmovies/SearchedMoviesContainer";
+import { Draft } from "@reduxjs/toolkit";
 
 // Define the types for your state
 interface UserState {
     user: string | null;
     userName: string;
-    searchedMovies: string[] | null;
+    searchedMovies: Draft<SearchedMovie>[] | null;
 }
 
 const initialState: UserState = {
